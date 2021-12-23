@@ -46,13 +46,6 @@
 
 Заголовок клиента - имя пользователя при отправке `Login` сообщения, имя файла при отправке `File` сообщения.
 
-```Rust
-struct Header {
-    pub to: Option<String>,       // username if message is private
-    pub filename: Option<String>, // filename if sending a file
-}
-```
-
 Заголовок сервера - сериализованная в формате JSON структура:
 
 ```Rust
