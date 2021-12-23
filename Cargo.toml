@@ -1,0 +1,31 @@
+[package]
+name = "chat"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["net", "io-util", "sync", "rt", "fs", "macros", "rt-multi-thread"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+num_enum = "0.5"
+thiserror = "1"
+uuid = { version = "0.8", features = ["v4"] }
+object-pool = "0.5"
+
+
+structopt = "0.3"
+regex = "1"
+tui = "0.16"
+termion = "1"
+lazy_static = "1"
+
+[[bin]]
+name = "server"
+path = "bin/server.rs"
+
+[[bin]]
+name = "client"
+path = "bin/client/main.rs"
